@@ -1,0 +1,62 @@
+<head>
+    <style>
+        form label {
+            display: inline-block;
+            width: 100px;
+        }
+
+        form div {
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <script>
+        function setAction(form, name, email, password) {
+            if (password == "password") {
+                alert("YOU GUESSED THE PASSWORD RIGHT");
+                alert("Hi, " + name + " thanks for giving me your email " + email + ".");
+            } else {
+                alert("WRONG. U R STOOPID.") //Hello future me!
+            }
+            return false;
+        }
+
+        function registerUser() {
+            alert(document,user_form.action);
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="p-2">
+        <form onsubmit="return setAction(this, document.getElementById('name').value,
+        document.getElementById('email').value, document.getElementById('password').value )">
+            <div>
+                <label>Name:</label>
+                <input id="name" name="name" type="text">
+            </div>
+            <div>
+                <label>Email:</label>
+                <input id="email" name="email" type="email">
+            </div>
+            <div>
+                <label>Password:</label>
+                <input id="password" name="password" type="text">
+            </div>
+            <div>
+                <input id="submit" type="submit">
+            </div>
+        </form>
+        <hr>
+        <form name="user_form">
+            <div>
+                <input id="register" type="submit" value="Register" onclick="return registerUser()">
+            </div>
+        </form>
+    </div>
+    <p>
+        I only edited the page I already had for this, I might do some more editing later.
+    </p>
+</body>
